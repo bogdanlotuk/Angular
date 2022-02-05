@@ -56,12 +56,12 @@ class PlanetOfSolarSystem implements Planet{
 let Jupiter = new PlanetOfSolarSystem(1200, false, 'Jupiter', 3500000, GroupOfPlanet.SecondGroup, [true, 20]);
 Jupiter.Info = "It is the biggest planet in our Solar system";
 
-function weKnowNewPlatet<T>(arg: T){
+function weKnowNewPlanet<T>(arg: T){
     console.log(`Now we have many info about ${arg}!`);
     return `Now we have many info about ${arg}!`;
 }
 
-weKnowNewPlatet("Jupiter");
+weKnowNewPlanet("Jupiter");
 
 console.log(Jupiter.showDistance());
 console.log(Jupiter.diameter);

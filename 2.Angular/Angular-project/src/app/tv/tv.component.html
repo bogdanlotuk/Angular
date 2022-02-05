@@ -1,0 +1,30 @@
+<section class="tv-app"> 
+    <div class="container">  
+        <div class="container__inner"> 
+            <div class="tv-app__top alert alert-primary" role="alert">
+                <p class="tv-app__top-text">Maibe do you want to watch movie like  "{{ tvMovie[0][0] }}" in our cinema? Film has been released in {{ tvMovie[0][1] }}. </p>
+            </div>   
+            <input class="tv-app__main-input form-control" type="text" [(ngModel)]="movieInputText" placeholder="Please write letter 'A' or 'B' and press button 'Search'">
+            <div class="tv-app__result alert alert-primary" role="alert">
+                <p class="tv-app__result-request">This is what do you want to find (if letters > 10, text will be red):</p>
+                <p class="tv-app__result-request-input" [ngClass]="{'text-red': lengthOfInput(movieInputText)}">{{ movieInputText }}</p>
+                <p class="tv-app__result_text">Result of search (you can add this movie to your list below) :</p>
+                <p class="tv-app__result_false" *ngIf = "!movieResultArr; else movieResultArrTrue">You don't have any movie now</p>
+                <ng-template #movieResultArrTrue>
+                    <p class="tv-app__result_response">{{ movieResultArr }}</p>
+                </ng-template>
+            </div>
+            <div class="tv-app__buttons-search-clear">
+                <button class="tv-app__btn-search btn btn-primary" type="button" (click)="movieResult()">Search</button>
+                <button class="tv-app__btn-clear btn btn-danger" type="button" [disabled]="!disabledSearch()" (click)="clearSearchResult()">Clear</button>
+            </div>
+            <hr>
+            <button class="tv-app__btn-add btn btn-success" type="button" (click)="addMovie()">Add movie to my list</button>
+            <ul class="tv-app__add-list">
+                <li class="tv-app__add-list-item" *ngFor="let movie of addedMovies; let idx = index" [ngStyle]="{backgroundColor: (idx + 1) % 2 === 0 ? '#9AC9E8' : '#DBE0E6'}">
+                    {{idx + 1}} - {{ movie }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

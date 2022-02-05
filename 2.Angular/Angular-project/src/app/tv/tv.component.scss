@@ -1,0 +1,57 @@
+.text-red {
+    color: red;
+    text-decoration: line-through;
+}
+
+.tv-app {
+    &__top {
+        margin: 20px 0;
+
+    }
+    &__top-text {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    &__main-input {
+        margin-bottom: 20px;
+    }
+    &__result {
+        &_text {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        &_false {}
+        &_response {}
+    }
+    &__result-request {}
+    &__result-request-input {}
+    &__buttons-search-clear {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__btn-search {
+        width: 100px;
+    }
+    &__btn-clear {
+        margin-left: 20px;
+        width: 100px;
+    }
+    &__btn-add {
+        width: 220px;
+    }
+    &__add-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    &__add-list-item {
+        font-size: 18px;
+        font-weight: bold;
+        color: green;
+    }
+}
+.container {
+    &__inner {}
+}
+

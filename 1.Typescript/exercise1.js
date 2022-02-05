@@ -35,11 +35,11 @@ var PlanetOfSolarSystem = /** @class */ (function () {
 }());
 var Jupiter = new PlanetOfSolarSystem(1200, false, 'Jupiter', 3500000, GroupOfPlanet.SecondGroup, [true, 20]);
 Jupiter.Info = "It is the biggest planet in our Solar system";
-function weKnowNewPlatet(arg) {
+function weKnowNewPlanet(arg) {
     console.log("Now we have many info about ".concat(arg, "!"));
     return "Now we have many info about ".concat(arg, "!");
 }
-weKnowNewPlatet("Jupiter");
+weKnowNewPlanet("Jupiter");
 console.log(Jupiter.showDistance());
 console.log(Jupiter.diameter);
 console.log(Jupiter.distance);
