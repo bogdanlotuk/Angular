@@ -2,11 +2,11 @@
     <div class="container">  
         <div class="container__inner"> 
             <div class="tv-app__top alert alert-primary" role="alert">
-                <p class="tv-app__top-text">Maibe do you want to watch movie like  "{{ tvMovie[0][0] }}" in our cinema? Film has been released in {{ tvMovie[0][1] }}. </p>
+                <p class="tv-app__top-text">Maibe you want to watch the movie like  "{{ tvMovie[0][0] }}" in our cinema? The film was released in {{ tvMovie[0][1] }}. </p>
             </div>   
             <input class="tv-app__main-input form-control" type="text" [(ngModel)]="movieInputText" placeholder="Please write letter 'A' or 'B' and press button 'Search'">
             <div class="tv-app__result alert alert-primary" role="alert">
-                <p class="tv-app__result-request">This is what do you want to find (if letters > 10, text will be red):</p>
+                <p class="tv-app__result-request">This is what you want to find (if letters > 10, text will be red):</p>
                 <p class="tv-app__result-request-input" [ngClass]="{'text-red': lengthOfInput(movieInputText)}">{{ movieInputText }}</p>
                 <p class="tv-app__result_text">Result of search (you can add this movie to your list below) :</p>
                 <p class="tv-app__result_false" *ngIf = "!movieResultArr; else movieResultArrTrue">You don't have any movie now</p>
